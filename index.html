@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitor ❤ Mickaelly - Feliz Dia dos Namorados</title>
+  <style>
+    /* Estilo de fundo e base */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #4b2e2e;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Corações */
+    .heart {
+      position: fixed;
+      bottom: -60px;
+      width: 30px;
+      height: 30px;
+      background: #ff1a4b;
+      transform: rotate(-45deg);
+      animation: rise 6s linear forwards;
+      opacity: 0.9;
+      z-index: 99;
+      pointer-events: none;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ff1a4b;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 15px;
+      top: 0;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #ff69b4;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mensagem {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      white-space: pre-line;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .galeria img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      width: 260px;
+      object-fit: cover;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffb6c1;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vitor ❤ Mickaelly</h1>
+    <p>Feliz Dia dos Namorados 🥰</p>
+  </header>
+
+  <div class="container">
+    <div class="mensagem">
+      <p>Oiee, tudo bem meu mozinho? Feliz Dia dos Namorados! 🥰
+
+Durante todo esse tempo juntos, ou melhor, desde aquele dia da nossa batalha de quem ama mais, eu venho gostando e amando você. Guardo todas aquelas conversas e lembro de todos os nossos momentos  felizes, tristes, ou até mesmo depressivos.
+
+Lembro dos seus sermões, do ciúme que sentia... mas eu só sentia amor. Sei que sou lesado, lerdo, posso até cometer alguns erros e acabar não te escutando, mas ainda assim eu continuo aqui e te amando , e sempre irei correr atrás de mudar pra ser melhor versão de mim e ser o homem da sua vida 🥰
+
+Mickaelly, lembra da promessa que fiz? Eu disse que nunca sairia do seu lado, nunca deixaria de te amar. Eu falei a verdade. Desde aquele tempo, eu só me apaixono mais e mais por você.
+
+Cada minuto, segundo, hora... eu me apaixono mais por você. Levo nosso relacionamento super a sério e, como prova, me esforço pra mudar, pra ser o homem com "H" maiúsculo  porque quero estar com você para sempre, até que a morte nos separe.
+
+Seus olhos me hipnotizam. Me perco olhando fixamente pra você. Sua beleza é magnífica, amo seu jeitinho. Você é gentil, fofa, muito inteligente, e doidinha como eu.
+
+Eu te amo muito, minha princesa... Sempre estarei aqui só pra você! 💖</p>
+    </div>
+
+    <div class="galeria">
+      <!-- Você pode adicionar imagens aqui -->
+    </div>
+  </div>
+
+  <footer>
+    <p>Com amor, Vitor 💖</p>
+  </footer>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 2 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+
+    setInterval(createHeart, 150); // Mais frequente
+  </script>
+</body>
+</html>
